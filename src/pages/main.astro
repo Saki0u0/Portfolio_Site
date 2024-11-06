@@ -1,0 +1,337 @@
+<div class="main">
+  <div class="line1">
+    <div class="line3">
+      <img src="../../public/close.svg" alt="close" class="icon" id="close">
+      <img src="../../public/square.svg" alt="squre" class="icon">
+      <img src="../../public/border.svg" alt="border" class="icon" id ="border">
+    </div>
+    <div class="line2">
+      <div class="background">
+        <img src="../../public/飛行機.png" alt="airPlane" class="airplane">
+        <div class="main-visual">
+         <div class="logo">
+           <h1 class="hello">
+             <span>H</span>
+             <span>E</span>
+             <span>L</span>
+             <span>L</span>
+             <span>O</span>
+             <span>!</span>
+           </h1>
+           <h2 class="name">
+             <span>My</span>
+             <span>name</span>
+             <span>is</span>
+           </h2>
+           <h1 class ="saki">
+             <span>SAKI</span>
+             <span>EBINA</span>
+             <span>!</span>
+           </h1>
+         </div>
+         <div class="clouds">
+           <img src="../../public/雲.png" alt="cloud1" class="cloud1">
+           <img src="../../public/雲.png" alt="cloud2" class="cloud2">
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+<!-- <script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+ 
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.set(".hello span",{ opacity: 0 });
+  gsap.set(".name span", { opacity: 0 });
+  gsap.set(".saki span", { opacity: 0 });
+  gsap.set(".airplane", { opacity: 0 });
+
+  gsap.from(".cloud1",{
+    x: -500, 
+    opacity: 0,
+    duration: 1.5,
+      scrollTrigger: {
+          trigger: ".main",
+          start: "top center",
+          toggleActions: "play none none reverse",
+          markers: true,
+      },
+  });
+  gsap.from(".cloud2", {
+  x: 500, 
+  opacity: 0,
+  duration: 1.5,
+  scrollTrigger: {
+    trigger: ".main",
+    start: "top center",
+    toggleActions: "play none none reverse",
+    markers: true,
+  }
+});
+
+gsap.delayedCall(1.5, () => {
+  gsap.fromTo(".airplane",
+    { x: "100vw", y: "100vh", opacity: 1 },
+    { x: "-100vw", y: "-100vh", duration: 15 }
+  );
+});
+
+setTimeout(() => {
+  gsap.fromTo(".hello span", {
+    y:-100,
+    opacity: 0,
+  },
+  { 
+    y: 0, 
+    opacity: 1,
+    duration: 1.0,
+    stagger: 0.2,
+    ease:"bounce.out"
+  });
+}, 8000); 
+
+setTimeout(() => {
+  gsap.fromTo(".name span", {
+    y:-100,
+    opacity: 0,
+  },
+  { 
+    y: 0, 
+    opacity: 1,
+    duration: 1.0,
+    stagger: 0.2,
+    ease:"bounce.out"
+  });
+}, 10000); 
+
+setTimeout(() => {
+  gsap.fromTo(".saki span", {
+    y:-100,
+    opacity: 0,
+  },
+  { 
+    y: 0, 
+    opacity: 1,
+    duration: 1.0,
+    stagger: 0.2,
+    ease:"bounce.out"
+  });
+}, 12000); 
+
+</script> -->
+
+<style>
+  .main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+
+  .line1{
+    border:3px solid #03005D ;
+    width:80%;
+    padding: 20px;
+    margin-top:60px;
+    background-color: #FB9AA3;
+  }
+
+  .line2{
+    border:3px solid #03005D ;
+    width:100%;
+    margin-top:10px
+  }
+
+  .line3{
+    border:3px solid #03005D ;
+    width:100%;
+    height:45px;
+    margin:0 auto;
+  }
+
+  .icon{
+    width:30px;
+    float:right;
+    margin-left:10px;
+    justify-items: center;
+    margin-top: 2px;
+  }
+
+  #close{
+    margin-right:10px;
+    width:35px;
+  }
+
+  #border{
+    margin-top:13px;
+  }
+
+
+.logo{ 
+  text-align: center;
+  color:#03005D;
+  letter-spacing: 1rem;
+  font-family: "Jaro", sans-serif;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  margin:0 auto;
+  position: relative;
+  top:-40px;
+}
+
+.hello{
+  text-align: center;
+}
+
+.hello span{
+  display: inline-block;
+  position: relative; 
+}
+
+.name span{
+  display: inline-block;
+  position: relative; 
+}
+
+.saki span{
+  display: inline-block;
+  position: relative; 
+}
+
+.logo h1{
+  font-size: 3.5rem ;
+  text-align: center;
+  margin: 0;
+}
+
+.logo h2{
+  font-size: 2rem;
+}
+
+.airplane{
+  transform: rotate(10deg);
+  width:400px;
+}
+
+.background{
+  width:100%;
+  position:relative;
+  z-index: 0;
+  background-image: url('../../public/background.png');
+  height:550px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.clouds{
+  display: grid;
+  grid-template-areas: "cloud1 . cloud2";
+  width: 120%;
+  padding-top: 100px;
+  transform: translate(-80px, -230px);
+}
+
+.cloud1{
+  grid-area: cloud1;
+  align-self: start;
+  justify-self: start;
+  width:500px;
+  padding-bottom:100px;
+}
+
+.cloud2{
+  grid-area: cloud2;
+  align-self: start;
+  justify-self: end;
+  width:500px;
+  transform: scale(-1, 1);
+}
+
+@media (max-width: 1024px) {
+
+  .clouds{
+    transform: translate(-80px, -130px);
+  }
+
+  .line1{
+    width:90%;
+  }
+  
+  .airplane {
+    width: 300px;
+  }
+
+  .logo{
+    top:0;
+  }
+
+  .logo h1 {
+    font-size: 2.5rem;
+  }
+
+  .logo h2 {
+    font-size: 1.5rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+  
+  .logo h1 {
+    font-size: 2rem;
+  }
+
+  .logo h2 {
+    font-size: 1.2rem;
+  }
+
+  .airplane {
+    width: 250px;
+  }
+
+  .cloud1, .cloud2 {
+    width: 250px;
+  }
+
+  .main {
+    height:600px;
+    padding-top:30px;
+    margin-bottom: 100px;
+  }
+
+  .background{
+    height:300px
+  }
+
+  .logo {
+    letter-spacing: 0.5rem;
+    top:-30px;
+  }
+
+  .airplane {
+    width: 200px;
+  }
+
+  .clouds {
+    padding-top:0px;
+    transform: translate(-50px, -60px)!important;
+  }
+}
+
+@media (max-width: 480px) {
+  .clouds {
+    padding-top:0px;
+    transform: translate(-70px, -60px)!important;
+  }
+}
+
+</style>
+

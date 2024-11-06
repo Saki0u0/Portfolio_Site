@@ -1,0 +1,98 @@
+<div id="contact">
+  <h1>Contact us</h1>
+  <form id="contact-form">
+    <div class="row mb-3">
+      <div class="col-sm-6">
+        <label for="exampleFormControlInput1" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="firstName" name="first_name" placeholder="First name" aria-label="First name">
+      </div>
+      <div class="col-sm-6">
+        <label for="exampleFormControlInput1" class="form-label text-start">Last Name</label>
+        <input type="text" class="form-control"
+        id="lastName" name="last_name" placeholder="Last name" aria-label="Last name">
+      </div>
+    </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label text-left">Email address</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label text-left">message</label>
+    <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+  </div>
+  <button type="submit" class="btn btn-dark">Submit</button>
+</form>
+  <div class="contact-icon">
+    <a href="www.linkedin.com/in/saki-ebina-62639b303"><img src = "../../public/linkedin.svg" class="linkedin" ></a>
+    <a href="https://github.com/Saki0u0"><img src = "../../public/github.svg" class="github"></a>
+    <a href="https://crowdworks.jp/public/employees/5600081?ref=share_x_wkprofile"><img src = "../../public/cloud.svg" class ="cloudworks"></a>
+  </div>
+</div>
+
+<style>
+
+  #contact {
+    padding-bottom:100px;
+    width: 800px;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  #contact h1{
+    margin-bottom:50px;
+    color:#03005D;
+    font-family: "Jaro", sans-serif;
+    font-size: 3rem;
+  }
+
+  p{
+    text-decoration: underline;
+  }
+  
+  .form-label {
+    text-align: left;
+  }
+
+  .btn{
+   margin-top:20px;
+   width:800px;
+   margin-bottom: 100px;
+   background-color: #03005D;
+   color: white;
+  }
+
+  .btn:hover{
+    opacity: 0.8;
+  }
+
+  .contact-icon{
+    display: flex;
+    margin: auto;
+    display: block;
+    text-align: center;
+  }
+
+  img{
+    width: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  @media (max-width:768px){
+    #contact{
+      width:80%;
+      text-align: center;
+      height:100%;
+    }
+
+    #contact h1{
+      text-align: center;
+    }
+
+    .btn{
+      width:100%
+    }
+  }
+</style>

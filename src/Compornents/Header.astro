@@ -1,0 +1,102 @@
+<header>
+  <div class='fixed-top'>
+    <nav class="navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: #03005D;" >
+      <div class="container-fluid">
+        <a class="navbar-brand text-white site-name" href="#menu">SAKI EBINA</a>
+        <div class ="langage" id="sp-langage">
+            <a class="nav-link text-white active eng">ENG</a>
+            <a class="nav-link text-white jpn">JPN</a>
+        </div>
+        <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#skill">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#work">Work</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <div class ="langage">
+              <a class="nav-link text-white active eng">ENG</a>
+              <a class="nav-link text-white jpn">JPN</a>
+          </div>
+          <form class="d-flex" role="search" data-bs-theme="light">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success " type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<style>
+
+  .site-name{
+    font-family: "Jaro", sans-serif;
+  }
+
+  .langage {
+    display:flex;
+    text-align: right;
+    margin-right:30px;
+    cursor: pointer;
+  }
+
+
+  .jpn{
+    text-decoration: underline;
+    margin-left:10px;
+  }
+
+  #sp-langage{
+    display: none;
+  }
+</style>
+
+<script>
+const jpnBtn = document.querySelectorAll('.jpn') as NodeListOf<HTMLElement>;
+const engBtn = document.querySelectorAll('.eng')  as NodeListOf<HTMLElement>;
+const japanese = document.querySelectorAll('.japanese')  as NodeListOf<HTMLElement>;
+const english = document.querySelectorAll('.english')  as NodeListOf<HTMLElement>;
+
+// 日本語ボタンのクリックイベントを追加
+jpnBtn.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    japanese.forEach((element) => {
+      element.style.display = 'block'; 
+    });
+    english.forEach((element) => {
+      element.style.display = 'none'; 
+    });
+
+    // jpnBtnの全てのボタンに下線を追加
+    jpnBtn.forEach((btn) => btn.style.textDecoration = 'underline');
+    engBtn.forEach((btn) => btn.style.textDecoration = 'none');
+  });
+});
+
+// 英語ボタンのクリックイベントを追加
+engBtn.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    japanese.forEach((element) => {
+      element.style.display = 'none';
+    });
+    english.forEach((element) => {
+      element.style.display = 'block'; 
+    });
+
+    jpnBtn.forEach((btn) => btn.style.textDecoration = 'none');
+    engBtn.forEach((btn) => btn.style.textDecoration = 'underline');
+  });
+});
+</script>

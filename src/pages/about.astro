@@ -1,0 +1,123 @@
+<div id="about">
+    <div class="right">
+      <div class="title">
+       <h1>About Me</h1>
+       <div class="mobile-photo">
+        <img src="../../public/photo.jpg" alt="photo" class="photo-icon">
+        <div class="square"></div>
+       </div>
+      </div>
+      <div class="description">
+        <p class ="japanese">
+          こんにちは！海老名彩希（えびな　さき）です。<br>
+          新卒で航空会社に入社し、4年間国際線のグランドスタッフを経験しました。
+          現在はカナダでウェブ開発を学び、フロントエンドエンジニアを目指しています。
+          建築学を専攻していた経験を活かし、デザインにも注力した開発を得意としています。<br>
+          カナダでの生活を通じて英語でのコミュニケーションや現地の文化を学び、チームでの問題解決能力やグローバルな視野をさらに磨いています。<br>
+          探究心を持って常にスキルを向上させ続けることが私の強みです。
+        </p>
+        <p class ="english">
+          Hello! My name is Saki Ebina.
+          I started my career at an airline as a new graduate, where I gained four years of experience as an international ground staff member.
+          Currently, I am studying web development in Canada, aspiring to become a frontend engineer.
+          With my background in architecture, I excel in development with a focus on design.
+          Through my life in Canada, I have been learning English communication and local culture, further honing my problem-solving skills and global perspective while working in teams.
+          My strength lies in my curiosity and my continuous commitment to improving my skills.
+        </p>
+      </div>
+    </div>
+    <div class="photo">
+      <img src="../../public/photo.jpg" alt="photo" class="photo-icon">
+      <div class="square"></div>
+    </div>
+</div>
+<style>
+
+#about{
+  display: flex;
+  width: 800px;
+  height:100vh;
+  align-items: center;
+  margin:0 auto;
+}
+
+.title h1{
+  color:#03005D;
+  margin-bottom: 30px;
+  font-family: "Jaro", sans-serif;
+  font-size: 3rem;
+}
+
+.mobile-photo{
+  display:none
+}
+
+.right{
+  width:50%;
+  margin-right:30px
+}
+
+.photo{
+ margin: 0 auto;
+}
+
+.photo-icon{
+  position:absolute;
+}
+
+.square{
+  width:300px;
+  height:300px;
+  background-color: #FB9AA3;
+  margin-top:30px;
+  margin-left:30px;
+}
+
+.description p{
+  line-height: 2rem;
+}
+
+.english{
+  display:none;
+}
+
+@media (max-width: 768px) {
+  #about{
+    width:100%;
+    flex-direction:column;
+    margin: 0 auto;
+    height:100%;
+    padding-bottom: 100PX;
+  }
+
+  .title h1{
+    text-align: center;
+  }
+
+  .mobile-photo{
+    display:block;
+    margin-bottom:50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-bottom: 50px;
+  }
+
+  .photo{
+    display:none;
+  }
+
+  .square{
+    margin-left: 50px;
+  }
+
+  .description{
+    text-align: center;
+  }
+
+  .right{
+    width:80%
+  }
+
+}
+</style>

@@ -1,0 +1,80 @@
+---
+import '../styles/skills.css';
+---
+
+<div id="skills">
+  <h1>Skills</h1>
+  <div class="skill-icon"></div>
+
+  <h3>Currently Learning</h3>
+  <div class="currently-learning"></div>
+</div>
+<script>
+//icon
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  // const skillsContainer = document.querySelector('.skills');
+const skillIconContainer = document.querySelector('.skill-icon');
+const currentlyLearningContainer = document.querySelector('.currently-learning')
+
+const skillsData = [
+  { src: '../../public/html.svg', alt: 'html', title: 'HTML' },
+  { src: '../../public/css.svg', alt: 'css', title: 'CSS' },
+  { src: '../../public/javascript.svg', alt: 'javascript', title: 'Javascript' },
+  { src: '../../public/jquery.svg', alt: 'jquery', title: 'jQuery' },
+  { src: '../../public/wordpress.svg', alt: 'wordpress', title: 'Wordpress' },
+  { src: '../../public/boostrap.svg', alt: 'boostrap', title: 'Boostrap' },
+  { src: '../../public/astro.svg', alt: 'astro', title: 'Astro' },
+  { src: '../../public/laptop.svg', alt: 'gsap', title: 'GSAP' },
+  { src: '../../public/photoshop.svg', alt: 'photoshop', title: 'Photoshop' },
+  { src: '../../public/tailwind.svg', alt: 'tailwind', title: 'Tailwind' },
+  { src: '../../public/figma.svg', alt: 'figma', title: 'Figma' },
+  { src: '../../public/github-pink.svg', alt: 'github', title: 'GitHub' },
+];
+
+skillsData.forEach(skill => {
+  const section = document.createElement('div');
+  section.className = 'section';
+
+  const img = document.createElement('img');
+  img.src = skill.src;
+  img.alt = skill.alt;
+  img.className = 'icon ';
+
+  const p = document.createElement('p');
+  p.className = 'skills-title';
+  p.textContent = skill.title;
+
+  section.appendChild(img);
+  section.appendChild(p);
+  skillIconContainer.appendChild(section);
+  });
+
+
+const learningData = [
+  { src: '../../public/react.svg', alt: 'react', title: 'React' },
+  { src: '../../public/typescript.svg', alt: 'typescript', title: 'Typescript' },
+  { src: '../../public/next-js.svg', alt: 'next-js', title: 'Next.js' },
+];
+
+learningData.forEach(skill => {
+  const section = document.createElement('div');
+  section.className = 'section';
+
+  const img = document.createElement('img');
+  img.src = skill.src;
+  img.alt = skill.alt;
+  img.className = 'icon';
+
+  const p = document.createElement('p');
+  p.className = 'skills-title';
+  p.textContent = skill.title;
+
+  section.appendChild(img);
+  section.appendChild(p);
+  currentlyLearningContainer.appendChild(section);
+});
+})
+  
+</script>
